@@ -12,6 +12,7 @@ public class ServiceImpl implements ServiceInterface {
 
     @Override
     public void find() {
+
         log.info("find 호출");
     }
 }
