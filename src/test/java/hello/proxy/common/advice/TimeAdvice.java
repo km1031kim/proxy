@@ -9,6 +9,8 @@ public class TimeAdvice implements MethodInterceptor {
 
     @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {
+
+        // advice 내에 pointcut 기능을 추가하면, 역할 분리 및 범용성이 떨어진다. -> pointcut으로 역할 분리
         log.info("TimeProxy 실행");
         long startTime = System.currentTimeMillis();
 
