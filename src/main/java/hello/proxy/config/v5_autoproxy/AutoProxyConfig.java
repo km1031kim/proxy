@@ -39,8 +39,6 @@ public class AutoProxyConfig {
         return new DefaultPointcutAdvisor(pointcut, advice);
     }
 
-
-
 //    @Bean
     public Advisor advisor2(LogTrace logTrace) {
         //pointcut
