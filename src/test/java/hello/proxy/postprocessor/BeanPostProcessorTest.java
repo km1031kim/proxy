@@ -56,6 +56,15 @@ public class BeanPostProcessorTest {
     @Slf4j
     static class AToBPostProcessor implements BeanPostProcessor {
 
+        /**
+         * A 객체를 B 객체로 바꿔치기
+         * BeanPostProcessor 를 구현하고 빈으로 등록하면 스프링 컨테이너가 빈 후처리기로 인식하고 동작한다.
+         * @PostConstruct는 CommonAnnotationBeanPostProcessor 가 처리한다.
+         * @param bean
+         * @param beanName
+         * @return
+         * @throws BeansException
+         */
         @Override
         public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
             log.info("빈 이름이랑 객체 전달. beanName={}, bean={}", beanName, bean);
